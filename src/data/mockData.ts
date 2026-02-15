@@ -40,7 +40,7 @@ export const heritageSites: HeritageSite[] = [
     ecologicalImportance: "The Panna National Park nearby protects tigers and diverse wildlife in the Vindhyan ecosystem.",
     localTraditions: "The annual Khajuraho Dance Festival brings classical Indian dance to life against the temple backdrop.",
     videoUrl: "https://www.youtube.com/embed/Lre6t-QDCJQ",
-    imageUrl: "https://images.unsplash.com/photo-1609947017136-9daf32a15c38?w=800",
+    imageUrl: "https://tse1.mm.bing.net/th/id/OIP.J5jflWdGQ9rwG1BzCbnCeAAAAA?pid=ImgDet&w=184&h=245&c=7&dpr=1.3&o=7&rm=3",
     tags: ["UNESCO", "Chandela", "Sculpture", "Temple"],
   },
   {
@@ -82,7 +82,7 @@ export const heritageSites: HeritageSite[] = [
     ecologicalImportance: "Located near Chilika Lake, Asia's largest brackish water lagoon, supporting flamingos and Irrawaddy dolphins.",
     localTraditions: "Odissi dance originated in temples like Konark. The annual Konark Dance Festival celebrates this classical art form.",
     videoUrl: "https://www.youtube.com/embed/PLxDg4j3hB0",
-    imageUrl: "https://images.unsplash.com/photo-1621427642084-523a164bd687?w=800",
+    imageUrl: "https://www.tripvaani.com/wp-content/uploads/2020/05/Konark-Sun-Temple-or-Black-Pagoda-The-Chariot-of-Sun.jpg",
     tags: ["UNESCO", "Sun Temple", "Kalinga", "Sculpture"],
   },
 ];
@@ -215,13 +215,13 @@ export const stories: Story[] = [
 
 export const biodiversityRecords: BiodiversityRecord[] = [
   { id: "bengal-tiger", species: "Royal Bengal Tiger", category: "animal", region: "Sundarbans, West Bengal", description: "The largest cat species in the world. The Sundarbans population is uniquely adapted to swimming and living in mangrove forests.", image: "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=600", conservationStatus: "Endangered", state: "West Bengal" },
-  { id: "indian-peacock", species: "Indian Peafowl", category: "animal", region: "Pan-India", description: "India's national bird, known for its spectacular iridescent tail display. Found across the Indian subcontinent.", image: "https://images.unsplash.com/photo-1577720643272-265e434cda30?w=600", conservationStatus: "Least Concern", state: "Rajasthan" },
+  { id: "indian-peacock", species: "Indian Peafowl", category: "animal", region: "Pan-India", description: "India's national bird, known for its spectacular iridescent tail display. Found across the Indian subcontinent.", image: "https://tse1.mm.bing.net/th/id/OIP.0GqH--7AgFK6wW3H8NVYCwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3", conservationStatus: "Least Concern", state: "Rajasthan" },
   { id: "asiatic-lion", species: "Asiatic Lion", category: "animal", region: "Gir Forest, Gujarat", description: "The only wild population of Asiatic lions exists in the Gir Forest. Conservation efforts increased their numbers from 20 to over 600.", image: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=600", conservationStatus: "Endangered", state: "Gujarat" },
-  { id: "one-horned-rhino", species: "Indian One-Horned Rhinoceros", category: "animal", region: "Kaziranga, Assam", description: "The world's largest population of one-horned rhinos lives in Kaziranga National Park, protected by dedicated forest guards.", image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600", conservationStatus: "Vulnerable", state: "Assam" },
-  { id: "banyan-tree", species: "Indian Banyan", category: "plant", region: "Pan-India", description: "India's national tree. The Great Banyan in Kolkata has the largest canopy in the world, spanning over 3.5 acres.", image: "https://images.unsplash.com/photo-1609139003551-ee40f5f74e38?w=600", conservationStatus: "Least Concern", state: "West Bengal" },
-  { id: "lotus", species: "Sacred Lotus", category: "plant", region: "Pan-India", description: "India's national flower, symbol of purity and divine beauty. Grows in muddy waters but blooms immaculate.", image: "https://images.unsplash.com/photo-1524634126442-00c769a25806?w=600", conservationStatus: "Least Concern", state: "Kashmir" },
+  { id: "one-horned-rhino", species: "Indian One-Horned Rhinoceros", category: "animal", region: "Kaziranga, Assam", description: "The world's largest population of one-horned rhinos lives in Kaziranga National Park, protected by dedicated forest guards.", image: "https://th.bing.com/th/id/OIP.OD-8buQw6ZicQXUK3i0lOAHaE8?w=256&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3", conservationStatus: "Vulnerable", state: "Assam" },
+  { id: "banyan-tree", species: "Indian Banyan", category: "plant", region: "Pan-India", description: "India's national tree. The Great Banyan in Kolkata has the largest canopy in the world, spanning over 3.5 acres.", image: "https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_700/MjA2MTA2NDA5ODMzMTQ1ODU1/11-auspicious-trees-in-hinduism-that-are-worshiped.png", conservationStatus: "Least Concern", state: "West Bengal" },
+  { id: "lotus", species: "Sacred Lotus", category: "plant", region: "Pan-India", description: "India's national flower, symbol of purity and divine beauty. Grows in muddy waters but blooms immaculate.", image: "https://th.bing.com/th/id/OIP.4eAZmjrDb_GRdOVwHAOvqwAAAA?w=265&h=190&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3", conservationStatus: "Least Concern", state: "Kashmir" },
   { id: "snow-leopard", species: "Snow Leopard", category: "animal", region: "Himalayas", description: "The 'Ghost of the Mountains' roams the high Himalayas. India is home to an estimated 700 snow leopards.", image: "https://images.unsplash.com/photo-1456926631375-92c8ce872def?w=600", conservationStatus: "Vulnerable", state: "Ladakh" },
-  { id: "nilgiri-tahr", species: "Nilgiri Tahr", category: "animal", region: "Western Ghats", description: "An endangered mountain goat found only in the Nilgiri Hills and Western Ghats of India.", image: "https://images.unsplash.com/photo-1518882515068-8b67f57fe98c?w=600", conservationStatus: "Endangered", state: "Kerala" },
+  { id: "nilgiri-tahr", species: "Nilgiri Tahr", category: "animal", region: "Western Ghats", description: "An endangered mountain goat found only in the Nilgiri Hills and Western Ghats of India.", image: "https://th.bing.com/th/id/OIP.pjA4i7dB3FpcCpGzVFiGIAHaFA?w=257&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3", conservationStatus: "Endangered", state: "Kerala" },
 ];
 
 export const quizQuestions: QuizQuestion[] = [

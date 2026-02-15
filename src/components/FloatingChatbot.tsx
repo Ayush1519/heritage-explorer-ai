@@ -1,14 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, X, Loader } from "lucide-react";
+import { MessageCircle, X } from "lucide-react";
+import { Chat } from "@/components/chat/Chat";
 
 export default function FloatingChatbot() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-
-  const handleIframeLoad = () => {
-    setIsLoading(false);
-  };
 
   return (
     <>
@@ -58,24 +54,9 @@ export default function FloatingChatbot() {
               <p className="text-xs text-white/80">Ask about India's heritage & biodiversity</p>
             </div>
 
-            {/* Chatbot Iframe */}
-            <div className="flex-1 overflow-hidden relative">
-              {isLoading && (
-                <div className="absolute inset-0 flex items-center justify-center bg-muted/50 backdrop-blur-sm z-10">
-                  <div className="flex flex-col items-center gap-2">
-                    <Loader className="w-6 h-6 text-primary animate-spin" />
-                    <p className="text-xs text-muted-foreground">Loading chatbot...</p>
-                  </div>
-                </div>
-              )}
-              <iframe
-                src="https://ai.studio/apps/drive/1fekAnhx8x1Xcko-krVKO1UjaeYk6iczk"
-                className="w-full h-full border-none"
-                title="Heritage Explorer Chatbot"
-                allow="microphone; camera; geolocation; clipboard-read; clipboard-write"
-                sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
-                onLoad={handleIframeLoad}
-              />
+            {/* Chat Component */}
+            <div className="flex-1 overflow-hidden flex flex-col">
+              <Chat />
             </div>
           </motion.div>
         )}
