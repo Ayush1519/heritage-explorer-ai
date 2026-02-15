@@ -28,14 +28,27 @@ export default function CommunityPage() {
 
   const fetchContributions = async () => {
     try {
+      console.log("🔄 Fetching contributions from backend...");
       // Fetch from backend
       const response = await fetch(`${BACKEND_URL}/api/contributions`);
+      console.log("📡 Response status:", response.status);
+      
       if (response.ok) {
         const data = await response.json();
+        console.log("✅ Received data:", data);
+        
         const backendContributions = data.contributions.map((c: any) => ({
-          ...c,
+          id: c._id || c.id || Date.now().toString(), // Map MongoDB _id to id field
+          type: c.type,
+          title: c.title,
+          content: c.content,
+          region: c.region,
+          category: c.category,
+          contributorName: c.contributorName,
+          status: c.status,
           createdAt: new Date(c.createdAt),
         }));
+        console.log("✅ Transformed contributions:", backendContributions);
         setContributions([...backendContributions, ...sampleContributions]);
       }
     } catch (err) {

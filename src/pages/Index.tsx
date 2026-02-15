@@ -105,7 +105,33 @@ export default function Index() {
         </motion.div>
       </section>
 
-      {/* Highlights */}
+      {/* Heritage Highlights */}
+      <section className="bg-card border-y border-border py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center mt-20">
+            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+              <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800" alt="Heritage Sites" className="rounded-2xl shadow-lg w-full" />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+              <h3 className="text-2xl md:text-3xl font-display font-bold mb-4">
+                Explore India's Heritage
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                Journey through India's most magnificent monuments — from the iconic Taj Mahal to the ancient ruins of Hampi. 
+                Experience UNESCO World Heritage Sites and centuries of architectural excellence in immersive 3D virtual tours.
+              </p>
+              <Link
+                to="/heritage"
+                className="inline-flex items-center gap-2 text-accent font-semibold hover:gap-3 transition-all"
+              >
+                Explore heritage <ArrowRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Biodiversity Highlights */}
       <section className="bg-card border-y border-border py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center mt-20">

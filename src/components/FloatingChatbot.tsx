@@ -69,7 +69,7 @@ export default function FloatingChatbot() {
                 </div>
               )}
               <iframe
-                src="https://9000-firebase-studio-1771152836014.cluster-xpmcxs2fjnhg6xvn446ubtgpio.cloudworkstations.dev"
+                src="https://ai.studio/apps/drive/1fekAnhx8x1Xcko-krVKO1UjaeYk6iczk"
                 className="w-full h-full border-none"
                 title="Heritage Explorer Chatbot"
                 allow="microphone; camera; geolocation; clipboard-read; clipboard-write"
