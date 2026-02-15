@@ -19,7 +19,6 @@ export default function XpBar() {
             <Star className="w-5 h-5 text-primary-foreground" />
           </div>
           <div>
-            <p className="text-sm font-semibold">Level {progress.level}</p>
             <p className="text-xs text-muted-foreground">{progress.xp} XP total</p>
           </div>
         </div>

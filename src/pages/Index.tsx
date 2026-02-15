@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Map, BookOpen, Leaf, Trophy, MessageCircle, Users, ArrowRight, Sparkles } from "lucide-react";
+import { Map, BookOpen, Leaf, Trophy, Users, ArrowRight, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-heritage.jpg";
-import storytellerImage from "@/assets/storyteller.jpg";
 import biodiversityImage from "@/assets/biodiversity-hero.jpg";
 import XpBar from "@/components/XpBar";
 
@@ -11,7 +10,6 @@ const features = [
   { icon: BookOpen, title: "Interactive Stories", desc: "Choose your path through history, culture, and ecology", path: "/stories", color: "bg-gradient-nature" },
   { icon: Leaf, title: "Biodiversity Map", desc: "Discover India's incredible wildlife and ecosystems", path: "/biodiversity", color: "bg-forest" },
   { icon: Trophy, title: "Quizzes & Games", desc: "Test your knowledge and earn XP with fun challenges", path: "/quizzes", color: "bg-terracotta" },
-  { icon: MessageCircle, title: "AI Cultural Guide", desc: "Chat with AI characters — storytellers, historians, and guides", path: "/chatbot", color: "bg-primary" },
   { icon: Users, title: "Community", desc: "Share local stories, traditions and observations", path: "/community", color: "bg-teal" },
 ];
 
@@ -73,11 +71,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* XP Bar */}
-      <div className="container mx-auto px-4 -mt-8 relative z-10">
-        <XpBar />
-      </div>
-
       {/* Feature Cards */}
       <section className="container mx-auto px-4 py-16">
         <motion.h2
@@ -115,27 +108,6 @@ export default function Index() {
       {/* Highlights */}
       <section className="bg-card border-y border-border py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <img src={storytellerImage} alt="AI Storyteller" className="rounded-2xl shadow-lg w-full" />
-            </motion.div>
-            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <h3 className="text-2xl md:text-3xl font-display font-bold mb-4">
-                Chat with AI Cultural Characters
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                Meet Dadi the folk storyteller from Rajasthan, Professor Arjun the historian, or Meera the wildlife guide.
-                Each AI character brings a unique perspective to India's rich heritage.
-              </p>
-              <Link
-                to="/chatbot"
-                className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
-              >
-                Start a conversation <ArrowRight className="w-4 h-4" />
-              </Link>
-            </motion.div>
-          </div>
-
           <div className="grid md:grid-cols-2 gap-12 items-center mt-20">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-2 md:order-1">
               <h3 className="text-2xl md:text-3xl font-display font-bold mb-4">
