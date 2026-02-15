@@ -1,13 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Map, BookOpen, Landmark, Leaf, Trophy, Users, Menu, X,LocateIcon } from "lucide-react";
+import { Map, BookOpen, Landmark, Leaf, Trophy, Users, Menu, X, LocateIcon } from "lucide-react";
 import { useState } from "react";
 
 const navItems = [
   { path: "/", label: "Home", icon: Landmark },
   { path: "/heritage", label: "Heritage", icon: Map },
-   { path: "/visit", label: "Visit", icon: LocateIcon },
-
+  { path: "/visit", label: "Visit", icon: LocateIcon },
   { path: "/stories", label: "Stories", icon: BookOpen },
   { path: "/biodiversity", label: "Biodiversity", icon: Leaf },
   { path: "/quizzes", label: "Quizzes", icon: Trophy },

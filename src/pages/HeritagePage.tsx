@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { heritageSites } from "@/data/mockData";
-import { MapPin, Clock, TreePine, Music, X, Play, ChevronRight } from "lucide-react";
+import { MapPin, Clock, TreePine, Music, X, ChevronRight } from "lucide-react";
 import { useUserProgress } from "@/hooks/useUserProgress";
+import { Heritage3DView } from "@/components/TajMahal3DView";
 
 export default function HeritagePage() {
   const [selectedSite, setSelectedSite] = useState<string | null>(null);
@@ -103,14 +104,66 @@ export default function HeritagePage() {
               <div className="p-6 space-y-6">
                 <p className="text-foreground leading-relaxed">{site.description}</p>
 
-                {/* Video */}
-                <div className="rounded-xl overflow-hidden border border-border aspect-video bg-muted flex items-center justify-center">
-                  <div className="text-center">
-                    <Play className="w-12 h-12 text-primary mx-auto mb-2" />
-                    <p className="text-sm text-muted-foreground">3D Virtual Tour Coming Soon</p>
-                    <p className="text-xs text-muted-foreground">Immersive experience of {site.name}</p>
-                  </div>
-                </div>
+                {/* 3D Virtual Tour */}
+                {site.id === "taj-mahal" && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                  >
+                    <h3 className="text-lg font-semibold mb-3 text-primary">Explore in 3D</h3>
+                    <Heritage3DView
+                      title="Taj Mahal 3D View"
+                      embedUrl="https://share.google/rcuNF56k8WFiiJyOK"
+                      description="Explore the iconic monument in 3D"
+                      height="h-96"
+                      instructions="🎯 Use your mouse to rotate • Scroll to zoom • Drag to pan the 3D model"
+                    />
+                    <p className="text-xs text-muted-foreground mt-2 text-center">
+                      🎯 Use your mouse to rotate • Scroll to zoom • Drag to pan the 3D model
+                    </p>
+                  </motion.div>
+                )}
+
+                {site.id === "jaisalmer" && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                  >
+                    <h3 className="text-lg font-semibold mb-3 text-primary">Explore in 360°</h3>
+                    <Heritage3DView
+                      title="Jaisalmer Fort 360° View"
+                      embedUrl="https://www.360cities.net/image/jaisalmer-fort"
+                      description="360° panoramic view of the magnificent Jaisalmer Fort"
+                      height="h-96"
+                      instructions="🎯 Click and drag to explore • Scroll to zoom in/out"
+                    />
+                    <p className="text-xs text-muted-foreground mt-2 text-center">
+                      🎯 Click and drag to explore • Scroll to zoom in/out the panorama
+                    </p>
+                  </motion.div>
+                )}
+
+                {site.id === "khajuraho" && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                  >
+                    <h3 className="text-lg font-semibold mb-3 text-primary">Explore in 360°</h3>
+                    <Heritage3DView
+                      title="Khajuraho Temples 360° View"
+                      embedUrl="https://www.360cities.net/image/khajuraho-group-of-monuments"
+                      description="360° panoramic view of the exquisite Khajuraho Temples"
+                      height="h-96"
+                      instructions="🎯 Click and drag to explore • Scroll to zoom in/out"
+                    />
+                    <p className="text-xs text-muted-foreground mt-2 text-center">
+                      🎯 Click and drag to explore • Scroll to zoom in/out the panorama
+                    </p>
+                  </motion.div>
+                )}
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="bg-card rounded-xl p-4 border border-border">

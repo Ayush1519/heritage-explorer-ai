@@ -33,8 +33,8 @@ const App = () => (
           <Route path="/visit" element={<Visit />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <FloatingChatbot />
       </BrowserRouter>
+      <FloatingChatbot />
     </TooltipProvider>
   </QueryClientProvider>
 );
